@@ -26,7 +26,7 @@ contract Degen is ERC20, Ownable, ERC20Burnable
             _burn(msg.sender, amount);
         }
         function gameStore() public pure returns(string memory) {
-            return "1. Diamond Player = 200 2. Gold Player = 100 \n 3. Silver Player = 50";
+            return "1. Diamond Player = 200 \n 2. Gold Player = 100 \n 3. Silver Player = 50";
         }
         function reedemTokens(uint choice) external payable{
             require(choice<=3,"Invalid selection");
@@ -41,9 +41,9 @@ contract Degen is ERC20, Ownable, ERC20Burnable
                 transferFrom(msg.sender, owner(), 100);
             }
             else{
-                require(balanceOf(msg.sender)>=75, "Insufficient Balance");
-                approve(msg.sender, 75);
-                transferFrom(msg.sender, owner(), 75);
+                require(balanceOf(msg.sender)>=50, "Insufficient Balance");
+                approve(msg.sender, 50);
+                transferFrom(msg.sender, owner(), 50);
             }
 
 
