@@ -11,6 +11,15 @@ The DegenToken contract is an ERC20 token smart contract that enables various fu
 
 * `Burning tokens`: Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
 
+## Importing Dependencies
+
+You have to import the following dependencies to run and deploy this smart contract
+
+```solidity
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+```
 
 ## Functions Available
 
