@@ -31,6 +31,11 @@ function burnTokens(uint amount)
 ```
 Any token holder can burn their own tokens if they are no longer needed. The burnTokens function allows token holders to burn a specific amount of tokens from their own balance.
 
+```solidity
+ function redeem(string memory item)
+```
+It will check the available tokens and the price and if the coditions are met it will transact the token to the user's account address
+
 ## Importing Dependencies
 
 You have to import the following dependencies to run and deploy this smart contract
