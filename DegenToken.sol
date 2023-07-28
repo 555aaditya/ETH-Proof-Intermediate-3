@@ -48,4 +48,15 @@ contract DegenGaming is ERC20, Ownable, ERC20Burnable
         require(balanceOf(msg.sender) >= amount, "Insufficient Funds");
         _burn(msg.sender, amount);
     }
+
+     function redeem(string memory item) public 
+     {
+        require(itemPrices[item] > 0, "Item not available for redemption");
+        require(balanceOf(msg.sender) >= itemPrices[item], "Insufficient balance");
+
+        _transfer(msg.sender, owner(), itemPrices[item]);
+        emit ItemRedeem(msg.sender, item);
+    }
+
+    
 }
